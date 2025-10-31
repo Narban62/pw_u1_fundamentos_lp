@@ -1,0 +1,41 @@
+/*2.selector por clase*/
+.titulos{
+    color: red;
+    font-size: 30px;
+    background-color: blue;
+}
+
+/*3.selector por id*/
+#id_titulo {
+    color: black;
+    background-color: red;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+/*4.pseudo clase (eventos)*/
+i:hover{
+    color: blue;
+    font-size: 50px;
+}
+input:focus {
+    /*border-color: yellow 100px;*/
+    border: blueviolet solid 10px ;
+    background: red;
+}
+/*5.por atributo*/
+[id] {
+    color: brown;
+    font-size: 50px;
+}
+/*para cualquiera que contenga la palabra*/
+img[alt*="uce"] {
+width: 80px;
+height: 50px;
+}
+/*Para un valor especifico*/
+/*
+img[alt="No 1"] {
+width: 80px;
+height: 50px;
+}*/

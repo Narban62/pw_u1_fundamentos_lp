@@ -1,3 +1,4 @@
+ /*1 por elemento*/
  h1 {
      color: red;
      background-color: blue;
@@ -21,4 +22,8 @@
      background-color: blueviolet;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+ }
+
+ body {
+    background-color: black;
  }
