@@ -33,16 +33,16 @@ function evaluarOperacion(tipo) {
     let num2 = parseFloat(document.getElementById('id_n2').value);
     let resultado = 0;
     if (tipo === '+') {
-        resultado = sumar(num1, num2)
+        resultado = sumar(num1, num2);
     }
     if (tipo === '-') {
-
+        resultado = restar(num1, num2);
     }
     if (tipo === '*') {
-
+        resultado = multiplicar(num1, num2);
     }
     if (tipo === '/') {
-
+        resultado = dividir(num1, num2);
     }
     document.getElementById('id_resultado').innerText = resultado;
 }
