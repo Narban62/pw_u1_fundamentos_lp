@@ -146,6 +146,59 @@ function fundamentosJS() {
         
     }
 
-/**     */
+    const est1 = {
+        nombre: 'Luisa',
+        apellido: 'Perenguez',
+        edad: 27,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    }
+        const est2 = {
+        nombre: 'Luisao',
+        apellido: 'Perenguez',
+        edad: 27,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    }
 
+    const arregloEstudiantes=[est1, est2,  
+        {
+        nombre: 'Luisaea',
+        apellido: 'Perenguez',
+        edad: 27,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+        }
+    ];
+    console.log(arregloEstudiantes[0])
+    console.log(arregloEstudiantes[2])
+
+/** Desestructuracion    */
+//Arreglos
+
+    const ar1=[1, 2, 3, 4, 5, 6, 7];
+    const     [a, b, c, d, e]=ar1;
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+    const [primero, , , , , , ultimo]=ar1;
+
+    console.log(primero);
+    console.log(ultimo);
+
+    const [p1, p2] = [1, 2, 3, 4, 5, 6, 7];
+    imprime(ar1, ar1, ar1);
+
+
+}
+
+function imprime (a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
