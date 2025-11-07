@@ -143,7 +143,7 @@ function fundamentosJS() {
     for (let clave in profesor) {
         console.log(clave);
         console.log(profesor[clave]);
-        
+
     }
 
     const est1 = {
@@ -154,7 +154,7 @@ function fundamentosJS() {
         genero: 'M',
         ciudad: 'Quito'
     }
-        const est2 = {
+    const est2 = {
         nombre: 'Luisao',
         apellido: 'Perenguez',
         edad: 27,
@@ -163,30 +163,30 @@ function fundamentosJS() {
         ciudad: 'Quito'
     }
 
-    const arregloEstudiantes=[est1, est2,  
+    const arregloEstudiantes = [est1, est2,
         {
-        nombre: 'Luisaea',
-        apellido: 'Perenguez',
-        edad: 27,
-        ecuatoriano: true,
-        genero: 'M',
-        ciudad: 'Quito'
+            nombre: 'Luisaea',
+            apellido: 'Perenguez',
+            edad: 27,
+            ecuatoriano: true,
+            genero: 'M',
+            ciudad: 'Quito'
         }
     ];
     console.log(arregloEstudiantes[0])
     console.log(arregloEstudiantes[2])
 
-/** Desestructuracion    */
-//Arreglos
+    /** Desestructuracion    */
+    //Arreglos
 
-    const ar1=[1, 2, 3, 4, 5, 6, 7];
-    const     [a, b, c, d, e]=ar1;
+    const ar1 = [1, 2, 3, 4, 5, 6, 7];
+    const [a, b, c, d, e] = ar1;
 
     console.log(a);
     console.log(b);
     console.log(c);
 
-    const [primero, , , , , , ultimo]=ar1;
+    const [primero, , , , , , ultimo] = ar1;
 
     console.log(primero);
     console.log(ultimo);
@@ -194,10 +194,73 @@ function fundamentosJS() {
     const [p1, p2] = [1, 2, 3, 4, 5, 6, 7];
     imprime(ar1, ar1, ar1);
 
+    //Objetos
+
+    const est3 = {
+        nombre: 'Jorge',
+        apellido: 'Perenguez',
+        edad: 27,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Cuenca'
+    }
+
+    // modifica valores de objetos con formato json,solo toma valores especificos del objeto
+    const { nombre: n, ciudad: ciu } = est3;
+    console.log(n);
+    console.log(ciu);
+
+    const { nombre: n2, ciudad: ciu2 } = {
+        nombre: 'L4',
+        apellido: 'Perenguez',
+        edad: 27,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    }
+    console.log(n2);
+    console.log(ciu2);
+
+    // referencia a un objeto dentro de otro objeto
+
+    const est4 = {
+        nombre: 'Jorge',
+        apellido: 'Perenguez',
+        edad: 27,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Cuenca',
+        direccion: {
+            calle: "Av. America",
+            barrio: "La gasca",
+            numeracion: "Oe3-123"
+        }
+    }
+
+    console.log(est4.direccion);
+    console.log(est4.direccion.barrio);
+    
+    
+    const {edad: ed, direccion } = est4;
+    console.log(ed);
+    console.log(direccion);
+
+    //deestructurar es como declarar una nueva varibale
+    //es util cuando se trabajaj con el framework , de las apis s recibe un json
+    //Sirve para no usar todos los atributos y hacer el json muy pesado
+    const {calle} = direccion;
+    console.log(calle);
+    
+    
+    const {direccion:{barrio, calle:c1, numeracion}} = est4;
+    console.log(barrio, c1, numeracion);
+    
+
+
 
 }
 
-function imprime (a, b, c) {
+function imprime(a, b, c) {
     console.log(a);
     console.log(b);
     console.log(c);
