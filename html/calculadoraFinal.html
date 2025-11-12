@@ -19,27 +19,27 @@
             <div id="calculadora">
 
                 <div id="display">
-                    <label for="">1+1=2</label>
+                    <label for=""></label>
                 </div>
-                <button onclick="borrarDisplay()">C</button>
-                <button>&larr;</button>
-                <button onclick="mostrarDisplay('%')">%</button>
-                <button onclick="mostrarDisplay('/')">/</button>
+                <button onclick="limpiarDisplay('C')">C</button>
+                <button onclick="borrar('&larr')">&larr;</button>
+                <button onclick="operacionTipo('%')">%</button>
+                <button onclick="operacionTipo('/')">/</button>
                 <button onclick="mostrarDisplay('7')">7</button>
                 <button onclick="mostrarDisplay('8')">8</button>
                 <button onclick="mostrarDisplay('9')">9</button>
-                <button onclick="mostrarDisplay('*')">*</button>
+                <button onclick="operacionTipo('*')">*</button>
                 <button onclick="mostrarDisplay('4')">4</button>
                 <button onclick="mostrarDisplay('5')">5</button>
                 <button onclick="mostrarDisplay('6')">6</button>
-                <button onclick="mostrarDisplay('-')">-</button>
+                <button onclick="operacionTipo('-')">-</button>
                 <button onclick="mostrarDisplay('1')">1</button>
                 <button onclick="mostrarDisplay('2')">2</button>
                 <button onclick="mostrarDisplay('3')">3</button>
-                <button onclick="mostrarDisplay('+')">+</button>
+                <button onclick="operacionTipo('+')">+</button>
                 <button onclick="mostrarDisplay('0')">0</button>
                 <button onclick="mostrarDisplay('.')">.</button>
-                <button class="column_2">=</button>
+                <button class="column_2" onclick="evaluarOperacion()">=</button>
 
             </div>
 
