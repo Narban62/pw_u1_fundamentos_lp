@@ -1,8 +1,8 @@
 function guardar() {
-    // validacion();
-    if (!validacion()) {
-        return;
-    }
+    validacion();
+    // if (!validacion()) {
+    //     return;
+    // }
     console.log("guardad");
     limpiarInput();
     const datos = {
@@ -13,7 +13,8 @@ function guardar() {
         cvv: document.getElementById("id_cvv").value
     };
     console.log(datos);
-    
+    mostrarContenido(datos);
+
 }
 
 function validacion() {
@@ -78,4 +79,16 @@ function limpiarInput() {
         const errores = document.querySelectorAll(".error_a")
         errores.forEach(e => e.innerText = "");
     }, 3000);
+}
+function mostrarContenido(datos) {
+    const contenedor = document.getElementById("id_mostrarContenido");
+
+    contenedor.innerHTML = `
+        <h3>Datos ingresados:</h3>
+        <p><strong>Nombre:</strong> ${datos.nombre}</p>
+        <p><strong>Apellido:</strong> ${datos.apellido}</p>
+        <p><strong>Número:</strong> ${datos.numero}</p>
+        <p><strong>Fecha:</strong> ${datos.fecha}</p>
+        <p><strong>CVV:</strong> ${datos.cvv}</p>
+    `;
 }
