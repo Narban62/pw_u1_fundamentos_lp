@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos</title>
+    <link rel="stylesheet" href="../css/pagos.css">
+    <script src="../js/pagos.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>Pagos</header>
+        <nav></nav>
+        <div class="formulario">
+            <div class="imagen_control"> <img src="../img/tarjeta.png" alt="No se pudo cargar la tarjeta">
+            </div>
+            <section>
+                <form action="#">
+                    <h2>Datos de la tarjeta</h2>
+                    <p type="Nombre:">
+                        <input id="id_nombre" type="text">
+                        <span id="id_error_nombre" class="error_a"></span>
+                    </p>
+                    <p type="Apellido:">
+                        <input id="id_apellido" type="text">
+                        <span id="id_error_apellido" class="error_a"></span>
+                    </p>
+                    <p type="Numero de Tarjeta:">
+                        <input id="id_num" type="number">
+                        <span id="id_error_num" class="error_a"></span>
+                    </p>
+                    <div class="input_pequeño_control">
+                        <p type="Fecha de Exp:">
+                            <input id="id_date" type="date" class="input_pequeño">
+                            <span id="id_error_date" class="error_a"></span>
+                        </p>
+                        <p type="CVV:">
+                            <input id="id_cvv" type="number" class="input_pequeño">
+                            <span id="id_error_cvv" class="error_a"></span>
+                        </p>
+                    </div>
+                    <div class="boton_control">
+                        <button onclick="guardar()">Guardar</button>
+                    </div>
+                </form>
+                
+            </section>
+            
+        </div>
+        <div id="id_mostrarContenido" class="contenido"></div>
+        <footer>Todos los derechos reservados</footer>
+    </div>
+</body>
+
+</html>

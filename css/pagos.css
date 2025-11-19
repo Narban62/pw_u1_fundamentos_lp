@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background: blue; */
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background: red; */
+}
+
+p::before {
+    content: attr(type);
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+
+}
+
+.imagen_control {
+    margin: 40px;
+    padding: 2px;
+    /* background: yellow; */
+}
+
+input {
+    width: 90%;
+    border-radius: 15px;
+}
+
+h2,
+header {
+    font-size: 30px;
+}
+
+form {
+    /* background: green; */
+}
+
+button {
+    font-size: 25px;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.boton_control {
+    text-align: center;
+    /* background: orange; */
+}
+
+.input_pequeño {
+    flex-direction: row;
+    width: 80%;
+}
+
+.input_pequeño_control {
+    /* background: rgb(42, 187, 119); */
+    display: flex;
+    flex-direction: row;
+}
+.error_a {
+    color: red;
+    font-size: 30px;
+}
+.contenido {
+    /* background: blueviolet; */
+}

@@ -1,7 +1,7 @@
 function guardar() {
     console.log("guardado");
     validacion();
-    limpiarMensajes();
+    limpiarMensajes()
 }
 function validacion() {
     let nombre = document.getElementById("id_nombre").value;
@@ -14,28 +14,28 @@ function validacion() {
         mostrarMensaje("Campo Nombre Vacio");
         mostrarAsterisco("id_error_nombre");
         return;
-    } else {
+    }else{
         borrarAsterisco("id_error_nombre");
     }
     if (apellido === "") {
         mostrarMensaje("Campo Apellido Vacio");
         mostrarAsterisco("id_error_apellido");
         return;
-    } else {
+    }else{
         borrarAsterisco("id_error_apellido");
     }
     if (fecha === "") {
         mostrarMensaje("Campo Fecha Vacio");
         mostrarAsterisco("id_error_date");
         return;
-    } else {
+    }else{
         borrarAsterisco("id_error_date");
     }
     if (email === "") {
         mostrarMensaje("Campo Email Vacio");
         mostrarAsterisco("id_error_email");
         return;
-    } else {
+    }else{
         borrarAsterisco("id_error_email");
         validarEmail(email);
     }
@@ -43,7 +43,7 @@ function validacion() {
         mostrarMensaje("Campo Password Vacio");
         mostrarAsterisco("id_error_password");
         return;
-    } else {
+    }else{
         borrarAsterisco("id_error_password");
         borrarMensaje("Datos Guardados");
 
@@ -61,15 +61,15 @@ function borrarMensaje(msg) {
     let mensaje = document.getElementById("id_msg_error");
     mensaje.innerText = msg;
     mensaje.style.display = "block";
-
+    
 }
 function mostrarAsterisco(idElemento) {
     document.getElementById(idElemento).innerText = "*";
 }
 
 function borrarAsterisco(idElemento) {
-    document.getElementById(idElemento).innerText = "";
-
+    document.getElementById(idElemento).innerText="";
+    
 }
 
 function validarEmail(email) {
@@ -78,6 +78,8 @@ function validarEmail(email) {
 }
 
 function limpiarMensajes() {
+
+
     setTimeout(() => {
         let valor = document.getElementById("id_msg_error");
         valor.innerText = "";
