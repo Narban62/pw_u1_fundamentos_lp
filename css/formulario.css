@@ -29,6 +29,9 @@ input {
     border-bottom: 2px solid rgb(61, 116, 75);
     background: rgb(203, 240, 212);
     color: rgb(40, 77, 30);
+    border-radius: 15px;
+    height: 30px;
+    padding: 2px 20px;
 }
 
 footer {
@@ -51,8 +54,10 @@ button {
     justify-content: center;
 }
 input:focus{
-    outline: none;
+    border-radius: 15px;
     border-bottom: 3px solid rgb(255, 146, 127);
+    padding: 2px 20px;
+    box-shadow: 5px 10px rgba(30, 43, 18, 0.89);
 }
 .formulario {
     background: rgb(125, 165, 114);
@@ -65,4 +70,26 @@ h2,header{
     border-bottom: 2px solid rgb(73, 139, 117);
     font-size: 35px;
     margin-bottom: 20px;
+}
+
+.llenar_formulario {
+    display: flex;
+    flex-direction: row;
+}
+
+.msg_error {
+    display: none;
+    text-align: center;
+    background: rgb(255, 146, 127);
+    border-radius: 15px;
+    border-left: 10px solid rgb(15, 49, 21);
+    padding: 10px;
+    font-weight: bold;
+}
+
+.error_asterisco {
+    color: brown;
+    font-weight: bold;
+    font-size: 30px;
+
 }
